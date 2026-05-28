@@ -21,6 +21,16 @@ function startTimer() {
     remainingSeconds--;
     updateDisplay();
 
+function updateClock() {
+  const now = new Date();
+  const h = now.getHours().toString().padStart(2, '0');
+  const m = now.getMinutes().toString().padStart(2, '0');
+  const s = now.getSeconds().toString().padStart(2, '0');
+  document.getElementById('currentTime').textContent = `${h}:${m}:${s}`;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
     if (remainingSeconds <= 0) {
       clearInterval(intervalId);
       intervalId = null;

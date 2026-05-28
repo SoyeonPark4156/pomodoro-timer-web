@@ -100,3 +100,10 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
+
+.current-time {
+  font-size: 1.25rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.8;
+  letter-spacing: 2px;
+}
